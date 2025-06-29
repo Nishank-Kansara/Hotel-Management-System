@@ -16,7 +16,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://hotel-management-system-frontend-tau.vercel.app") // React frontend
+                        .allowedOrigins("https://hotel-management-system-b7rh.onrender.com") // React frontend
                         .allowedMethods("*");
             }
         };
