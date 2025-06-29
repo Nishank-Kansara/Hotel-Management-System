@@ -29,7 +29,7 @@ public class CorsConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("https://hotel-management-system-frontend-4sga2ttg7.vercel.app");
+        config.addAllowedOrigin("https://hotel-management-system-frontend-tau.vercel.app");
         config.setAllowedHeaders(Arrays.asList(
                 HttpHeaders.AUTHORIZATION,
                 HttpHeaders.CONTENT_TYPE,
