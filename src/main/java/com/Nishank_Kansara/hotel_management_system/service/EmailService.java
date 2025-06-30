@@ -25,14 +25,14 @@ public class EmailService {
 
             String htmlContent = """
                 <div style="font-family: Arial, sans-serif; padding: 20px;">
-                    <h2 style="color: #4f46e5;">🔐 NJ HOTEL - Password Reset</h2>
+                    <h2 style="color: #4f46e5;">🔐 JHotel - Password Reset</h2>
                     <p>Hi there,</p>
                     <p>We received a request to reset your password. Use the OTP below to continue:</p>
                     <div style="margin: 20px 0; padding: 10px; background-color: #f3f4f6; border-left: 4px solid #4f46e5;">
                         <h3 style="margin: 0; font-size: 24px; color: #111827;">%s</h3>
                     </div>
                     <p>If you didn't request this, please ignore this email.</p>
-                    <p>Thanks,<br/>NJ Hotel Team</p>
+                    <p>Thanks,<br/>JHotel Team</p>
                 </div>
                 """.formatted(otp);
 
@@ -53,12 +53,12 @@ public class EmailService {
             MimeMessage message = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
 
-            String subject = "✅ Booking Confirmed - NJ Hotel";
+            String subject = "✅ Booking Confirmed - JHotel";
             String htmlContent = """
                 <div style="font-family: Arial, sans-serif; padding: 20px;">
                     <h2 style="color: #10b981;">✅ Booking Confirmation</h2>
                     <p>Dear Guest,</p>
-                    <p>Thank you for choosing NJ Hotel! Your booking has been successfully confirmed with the following details:</p>
+                    <p>Thank you for choosing JHotel! Your booking has been successfully confirmed with the following details:</p>
                     <ul style="margin: 20px 0; padding: 0 0 0 20px;">
                         <li><strong>Room Type:</strong> %s</li>
                         <li><strong>Check-In Date:</strong> %s</li>
@@ -66,7 +66,7 @@ public class EmailService {
                         <li><strong>Total Amount Paid:</strong> ₹%.2f</li>
                     </ul>
                     <p>We look forward to hosting you. For any queries, feel free to contact us.</p>
-                    <p>Warm regards,<br/>NJ Hotel Team</p>
+                    <p>Warm regards,<br/>JHotel Team</p>
                 </div>
                 """.formatted(roomType, checkIn, checkOut, totalAmount);
 
